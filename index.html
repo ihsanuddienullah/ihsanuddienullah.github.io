@@ -68,10 +68,10 @@
 <!-- banner slider -->
 <div class="w3l-banner-slider">
     <div class="wrapper-container">
-        <!-- Container for all sliders, and pagination -->
+        <!-- Container for all sliders, and pagination -->        
         <main class="sliders-container">
             <!-- Here will be injected sliders for images, numbers, titles and links -->
-
+            
             <!-- Simple pagination for the slider -->
             <ul class="pagination">
                 <li class="pagination__item"><a class="pagination__button"></a></li>
@@ -194,22 +194,33 @@
 <!-- testimonial -->
 <section class="w3l-quote-main">
     <div class="quote py-5">
-        <div class="container py-lg-5">
-            <div class="row">
-                <div class="col-lg-9">
+        <div class="container py-lg-3" style="text-align: center; color: white;">
+          <h3>Hello World. Im a graduate student of Informatics Engineering. Born and raised in Java, Indonesia. I run things with passion, lifelong learning. Passionate about client-side programming especially UI design and front-end environment</h3>
+          <img src="assets/images/client2.jpg" alt="" class="img-fluid" />
+          <div>
+              <h4 class="mb-0 mt-lg-3">Muhammad Ihsanuddienullah</h4>
+              <h6 class="mt-1"><span
+                class="txt-rotate"
+                data-period="2000"
+                data-rotate='[ "Software Engineer", "Frontend Developer", "Frontend Engineer", "Web Developer", "Fullstack Developer" ]'></span></6>
+          </div>
+              <!-- <div class="row">
+                <div class="col-lg-6">
                     <h4>" I've worked with some X company for several years and that is the best company in the Market.
                         Mauris elementum tortor a nisl
                         aliquet fringilla. Donec et risus augue. Proin sit amet maximus dui Vivamus lacinia nisi tempor
-                        ligula sagittis vehicula."</h4>
+                        ligula sagittis vehicula."</h4> 
+                        
                 </div>
-                <div class="col-lg-3 mt-lg-0 mt-3 text-lg-center tablet-grid">
+            
+                <div class="col-lg-6 mt-lg-0 mt-3 text-lg-center tablet-grid">
                     <img src="assets/images/client2.jpg" alt="" class="img-fluid" />
                     <div>
                         <h6 class="mb-0 mt-lg-3">Johnson smith</h6>
                         <h5 class="mt-1">- UI/UX Designer </h5>
                     </div>
                 </div>
-            </div>
+            </div>  -->
         </div>
     </div>
 </section>
@@ -396,7 +407,7 @@
       cssClass: 'ms--links',
       range: [0, 3],
       rangeContent: function (i) {        
-        return '<a href="'+ titles[i] + '.html" class="ms-slide__link btn">View More</a>';        
+        return '<a href="'+ titles[i].toLowerCase() + '.html" class="ms-slide__link btn">View More</a>';        
       },
       vertical: true,
       interactive: false
@@ -463,6 +474,65 @@
       $('body').toggleClass('noscroll');
     })
   });
+</script>
+
+<script>
+  var TxtRotate = function(el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+  };
+
+  TxtRotate.prototype.tick = function() {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
+
+    if (this.isDeleting) {
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+    var that = this;
+    var delta = 300 - Math.random() * 100;
+
+    if (this.isDeleting) { delta /= 2; }
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+      delta = this.period;
+      this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+      this.isDeleting = false;
+      this.loopNum++;
+      delta = 500;
+    }
+
+    setTimeout(function() {
+      that.tick();
+    }, delta);
+  };
+
+  window.onload = function() {
+    var elements = document.getElementsByClassName('txt-rotate');
+    for (var i=0; i<elements.length; i++) {
+      var toRotate = elements[i].getAttribute('data-rotate');
+      var period = elements[i].getAttribute('data-period');
+      if (toRotate) {
+        new TxtRotate(elements[i], JSON.parse(toRotate), period);
+      }
+    }
+    // INJECT CSS
+    var css = document.createElement("style");
+    css.type = "text/css";
+    css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+    document.body.appendChild(css);
+  };
 </script>
 <!-- disable body scroll which navbar is in active -->
 
