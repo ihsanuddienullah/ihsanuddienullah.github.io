@@ -77,7 +77,6 @@
                 <li class="pagination__item"><a class="pagination__button"></a></li>
                 <li class="pagination__item"><a class="pagination__button"></a></li>
                 <li class="pagination__item"><a class="pagination__button"></a></li>
-                <li class="pagination__item"><a class="pagination__button"></a></li>
             </ul>
             <div class="social">
                 <a class="" href="mailto:ihsanuddienullah@gmail.com?subject=Hi!"><span class="fa fa-envelope"></span></a>
@@ -202,7 +201,7 @@
               <h6 class="mt-1"><span
                 class="txt-rotate"
                 data-period="500"
-                data-rotate='[ "Software Engineer", "Frontend Developer", "Frontend Engineer", "Web Developer", "Fullstack Developer" ]'></span></6>
+                data-rotate='[ "Frontend Developer", "Frontend Engineer", "Web Developer", "UI Designer" ]'></span></6>
           </div>
               <!-- <div class="row">
                 <div class="col-lg-6">
@@ -277,8 +276,7 @@
 					<div class="col-lg-8 footer-left">
 						<!-- <p class="m-0">Hello! Finally you find this. So this is © Copyright 2020 Eccentric Portfolio. Starter design by <a
                 href="https://w3layouts.com">W3layouts</a></p> -->
-                <p>Muhammad Ihsanuddienullah</p>
-                <p></p>
+                <p>Muhammad Ihsanuddienullah</p>                
 					</div>
 					<div class="col-lg-4 footer-right text-lg-right text-center mt-lg-0 mt-3">
 						<ul class="social m-0 p-0">
@@ -300,25 +298,6 @@
 	<span class="fa fa-angle-up"></span>
 </button>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
 <script>
 	// When the user scrolls down 20px from the top of the document, show the button
 	window.onscroll = function () {
@@ -374,16 +353,15 @@
 
     // Initializing the titles slider
     var titles = [
-      'Skills',
-      'Experience',
-      'Education',
+      'About',
+      'Works',
       'Portfolios'
     ];
 
     var msTitles = new MomentumSlider({
       el: slidersContainer,
       cssClass: 'ms--titles',
-      range: [0, 3],
+      range: [0, 2],
       rangeContent: function (i) {
         return '<h3>' + titles[i] + '</h3>';
       },
@@ -401,7 +379,7 @@
     var msLinks = new MomentumSlider({
       el: slidersContainer,
       cssClass: 'ms--links',
-      range: [0, 3],
+      range: [0, 2],
       rangeContent: function (i) {        
         return '<a href="'+ titles[i].toLowerCase() + '.html" class="ms-slide__link btn">View More</a>';        
       },
@@ -421,7 +399,7 @@
       // CSS class to reference the slider
       cssClass: 'ms--images',
       // Generate the 4 slides required
-      range: [0, 3],
+      range: [0, 2],
       rangeContent: function () {
         return '<div class="ms-slide__image-container"><div class="ms-slide__image"></div></div>';
       },
