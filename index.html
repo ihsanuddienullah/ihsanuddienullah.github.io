@@ -14,6 +14,13 @@
   <!-- Template CSS -->
   <link rel="stylesheet" href="assets/css/style-starter.css">
 
+  <style>
+    .ms--numbers {
+      font-size: 5px;
+    }
+
+  </style>
+
 </head>
 
 <body>
@@ -248,7 +255,7 @@
 			<div class="footer-content">
 				<div class="row">
 					<div class="col-lg-8 footer-left">
-						<!-- <p class="m-0">Hello! Finally you find this. So this is © Copyright 2020 Eccentric Portfolio. Design by <a
+						<!-- <p class="m-0">Hello! Finally you find this. So this is © Copyright 2020 Eccentric Portfolio. Starter design by <a
                 href="https://w3layouts.com">W3layouts</a></p> -->
                 <p>Muhammad Ihsanuddienullah</p>
                 <p></p>
@@ -313,9 +320,10 @@
     var msNumbers = new MomentumSlider({
       el: slidersContainer,
       cssClass: 'ms--numbers',
-      range: [1, 4],
+      range: [1, 2],
       rangeContent: function (i) {
-        return '0' + i;
+        // return '0' + i;
+        return 'swipe right'
       },
       style: {
         transform: [{
@@ -330,9 +338,9 @@
 
     // Initializing the titles slider
     var titles = [
-      'Muhammad',
-      'Ihsanuddienullah',
-      'Creative',
+      'Skills',
+      'Experience',
+      'About',
       'Portfolio'
     ];
 
