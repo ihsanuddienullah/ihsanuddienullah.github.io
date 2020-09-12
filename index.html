@@ -283,6 +283,26 @@
 <button onclick="topFunction()" id="movetop" class="bg-primary" title="Go to top">
 	<span class="fa fa-angle-up"></span>
 </button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 <script>
 	// When the user scrolls down 20px from the top of the document, show the button
 	window.onscroll = function () {
@@ -320,7 +340,7 @@
     var msNumbers = new MomentumSlider({
       el: slidersContainer,
       cssClass: 'ms--numbers',
-      range: [1, 2],
+      range: [1, 1],
       rangeContent: function (i) {
         // return '0' + i;
         return 'swipe right'
@@ -340,8 +360,8 @@
     var titles = [
       'Skills',
       'Experience',
-      'About',
-      'Portfolio'
+      'Education',
+      'Portfolios'
     ];
 
     var msTitles = new MomentumSlider({
@@ -360,14 +380,14 @@
       interactive: false
     });
 
-
+  
     // Initializing the links slider
     var msLinks = new MomentumSlider({
       el: slidersContainer,
       cssClass: 'ms--links',
       range: [0, 3],
-      rangeContent: function () {
-        return '<a href="about.html" class="ms-slide__link btn">View More</a>';
+      rangeContent: function (i) {        
+        return '<a href="'+ titles[i] + '.html" class="ms-slide__link btn">View More</a>';        
       },
       vertical: true,
       interactive: false
