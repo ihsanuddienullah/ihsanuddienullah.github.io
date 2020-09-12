@@ -15180,7 +15180,8 @@ a {
 
 /*-- quote --*/
 .w3l-quote-main .quote {
-  background: url(../images/g5.jpg) 0px 0px;
+  /* background: url(../images/g5.jpg) 0px 0px; */
+  background-color: #222831;
   background-size: cover;
   background-attachment: fixed;
   position: relative;
@@ -15193,7 +15194,7 @@ a {
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.7);
+  /* background: rgba(0, 0, 0, 0.7); */
 }
 
 .w3l-quote-main .quote h4 {
