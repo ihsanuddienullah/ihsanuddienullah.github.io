@@ -14,6 +14,10 @@
   <!-- Template CSS -->
   <link rel="stylesheet" href="assets/css/style-starter.css">
 
+  <link rel="stylesheet" href="assets/css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="assets/css/style.css"> 
+	<script src="assets/js/modernizr.js"></script> <!-- Modernizr -->
+
   <style>
     body {
       font-family: ubuntu !important;
@@ -28,41 +32,29 @@
         font-size: 4px;      
       }
     }    
+
+    
   </style>
 
 </head>
 
 <body>
 <!-- header -->
-<div class="w3l-header" id="home">
+<!-- <div class="w3l-header" id="home">
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark pl-0 pr-0">
-            <a class="navbar-brand m-0 text-primary" href="index.html"><span class="fa fa-gamepad"></span> Eccentric </a> 
-                <!-- <span class="logo">portfolio</span>-->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active mr-lg-4">
-                        <a class="nav-link pl-0 pr-0 font-weight-bold" href="index.html">Home <span
-                                class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item mr-lg-4">
-                        <a class="nav-link pl-0 pr-0 font-weight-bold" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item mr-lg-4">
-                        <a class="nav-link pl-0 pr-0 font-weight-bold" href="services.html">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link pl-0 pr-0 font-weight-bold" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+      <nav class="navbar navbar-expand-lg navbar-dark pl-0 pr-0">
+        <a class="navbar-brand m-0 text-primary" href="index.html"><span class="fa fa-gamepad"></span> Eccentric </a>       
+      </nav>
     </div>
-</div>
+</div> -->
+<nav>
+  <ul class="cd-primary-nav">
+    <li><a href="#0">About</a></li>
+    <li><a href="#0">Works</a></li>
+    <li><a href="#0">Portfolios</a></li>            
+  </ul>
+</nav>
+
 <!-- //header -->
 
 <!-- banner slider -->
@@ -276,7 +268,8 @@
 					<div class="col-lg-8 footer-left">
 						<!-- <p class="m-0">Hello! Finally you find this. So this is © Copyright 2020 Eccentric Portfolio. Starter design by <a
                 href="https://w3layouts.com">W3layouts</a></p> -->
-                <p>Muhammad Ihsanuddienullah</p>                
+                <p>Muhammad Ihsanuddienullah</p>
+                <p style="font-size: smaller;">Redesign from W3layouts</p>
 					</div>
 					<div class="col-lg-4 footer-right text-lg-right text-center mt-lg-0 mt-3">
 						<ul class="social m-0 p-0">
@@ -297,6 +290,16 @@
 <button onclick="topFunction()" id="movetop" class="bg-primary" title="Go to top">
 	<span class="fa fa-angle-up"></span>
 </button>
+
+<div class="cd-overlay-nav">
+  <span></span>
+</div> <!-- cd-overlay-nav -->
+
+<div class="cd-overlay-content">
+  <span></span>
+</div> <!-- cd-overlay-content -->
+
+<a href="#0" class="cd-nav-trigger">Menu<span class="cd-icon"></span></a>
 
 <script>
 	// When the user scrolls down 20px from the top of the document, show the button
@@ -508,6 +511,8 @@
     document.body.appendChild(css);
   };
 </script>
+<script src="assets/js/velocity.min.js"></script>
+<script src="assets/js/main.js"></script> <!-- Resource jQuery -->
 <!-- disable body scroll which navbar is in active -->
 
 </body>
