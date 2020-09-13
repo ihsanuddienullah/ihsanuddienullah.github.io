@@ -50,7 +50,7 @@
 </div> -->
 <nav>
   <ul class="cd-primary-nav" style="font-size: 35px;">
-    <li><a href="#0">About</a></li>
+    <li><a href="#about">About</a></li>
     <li><a href="#0">Works</a></li>
     <li><a href="#0">Portfolios</a></li>            
   </ul>
@@ -184,7 +184,7 @@
 <!-- //iphone home block -->
 
 <!-- testimonial -->
-<section class="w3l-quote-main">
+<section class="w3l-quote-main" id="about">
     <div class="quote py-5">
         <div class="container py-lg-3" style="text-align: center; color: white;">                    
           <h1 style="font-size: 20px; padding-bottom: 20px;">"Hello World. Im a graduate student of Informatics Engineering. Born and raised in Java, Indonesia. I run things with passion, lifelong learning. Passionate about client-side programming especially UI design and front-end environment."</h1>
@@ -386,7 +386,7 @@
       range: [0, 2],
       rangeContent: function (i) {        
         // return '<a href="'+ titles[i].toLowerCase() + '.html" class="ms-slide__link btn">View More</a>';        
-        return '<a href="#" class="ms-slide__link btn">View More</a>';                
+        return '<a href="#'+ titles[i].toLowerCase() +'" class="ms-slide__link btn">View More</a>';                
       },
       vertical: true,
       interactive: false
