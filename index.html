@@ -34,6 +34,14 @@
         font-size: 4px;      
       }
     }    
+
+    #logo {
+      width: 170px;
+    }
+
+    .cd-nav-trigger {
+      z-index: 10;
+    }
   </style>
 
 </head>
@@ -43,7 +51,9 @@
 <div class="w3l-header" id="home">
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-dark pl-0 pr-0">
-        <a class="navbar-brand m-0 text-primary" href="index.html"><span class="fa fa-github"></span> Eccentric </a>       
+        <a class="navbar-brand m-0" href="index.html">
+          <img src="assets/images/logo-header.png" alt="" srcset="" id="logo">      
+        </a>
       </nav>
     </div>
 </div>
@@ -60,7 +70,7 @@
 <!-- //header -->
 
 <!-- banner slider -->
-<div class="w3l-banner-slider" id="home">
+<div class="w3l-banner-slider">
     <div class="wrapper-container">
         <!-- Container for all sliders, and pagination -->        
         <main class="sliders-container">
