@@ -150,7 +150,7 @@ header {
   transition-delay: 0.4s;
 }
 .cd-nav-trigger::after {
-  background-color: white;
+  background-color: #091d23;
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
   -ms-transform: scale(0);
@@ -190,7 +190,7 @@ header {
   background-color: rgba(255, 255, 255, 0);
 }
 .cd-nav-trigger.close-nav .cd-icon::before, .cd-nav-trigger.close-nav .cd-icon::after {
-  background-color: #1e6074;
+  background-color: white;
 }
 .cd-nav-trigger.close-nav .cd-icon::before {
   -webkit-transform: translateY(0) rotate(45deg);
@@ -216,7 +216,7 @@ header {
   width: 100%;
   padding: 80px 5%;
   z-index: 3;
-  background-color: #091d23;
+  background-color: rgba(30, 96, 116, 0.4);
   overflow: auto;
   /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
   -webkit-overflow-scrolling: touch;
@@ -318,7 +318,7 @@ header {
   z-index: 2;
 }
 .cd-overlay-nav span {
-  background-color: #1e6074;
+  background-color: rgba(30, 96, 116, 0.9);
 }
 
 .cd-overlay-content {
@@ -326,7 +326,7 @@ header {
   z-index: 4;
 }
 .cd-overlay-content span {
-  background-color: white;
+  background-color: #091d23;
 }
 
 .cd-content {
