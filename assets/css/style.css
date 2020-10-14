@@ -216,7 +216,8 @@ header {
   width: 100%;
   padding: 80px 5%;
   z-index: 3;
-  background-color: rgba(30, 96, 116, 0.4);
+  /* background-color: rgba(30, 96, 116, 0.4); */
+  background-color: rgba(30, 96, 116, 1);
   overflow: auto;
   /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
   -webkit-overflow-scrolling: touch;
@@ -318,7 +319,8 @@ header {
   z-index: 2;
 }
 .cd-overlay-nav span {
-  background-color: rgba(30, 96, 116, 0.9);
+  /* background-color: rgba(30, 96, 116, 0.9); */
+  background-color: rgba(30, 96, 116, 1);
 }
 
 .cd-overlay-content {
