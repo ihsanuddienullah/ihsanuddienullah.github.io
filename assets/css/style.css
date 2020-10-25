@@ -241,9 +241,17 @@ header {
   -moz-transition: color 0.2s;
   transition: color 0.2s;
 }
+
+.no-touch .cd-primary-nav a {
+}
+
 .no-touch .cd-primary-nav a:hover {
   color: #ffffff;
+  transition: all 0.2s;  
+  font-size: 40px;  
+  font-style: unset !important;
 }
+
 .cd-primary-nav.fade-in {
   /* navigation visible at the end of the circle animation */
   visibility: visible;
